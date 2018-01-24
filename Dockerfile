@@ -30,11 +30,7 @@ FROM ubuntu:artful
 MAINTAINER Jermine.hu@qq.com
 WORKDIR /app
 COPY ./sources.list /etc/apt/sources.list
-RUN apt-get update -y && apt-get install -y software-properties-common && add-apt-repository ppa:jonathonf/python-3.6 && apt-get update -y;\
-    apt-get install -y python3.6 python3-pip ;\
-    update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1 ;\
-    update-alternatives --config python3 ;\
-    alias "pip3.6"="python3.6 -m pip $1" ;\
+RUN apt-get update -y && apt-get upgrade -y ;\
     python3 -V && pip -V
-RUN pip3.6 install https://download.pytorch.org/whl/cpu/torch-0.3.0.post4-cp36-cp36m-linux_x86_64.whl  ;\
-    pip3.6 install torchvision -i https://mirrors.aliyun.com/pypi/simple/ 
+RUN pip3 install https://download.pytorch.org/whl/cpu/torch-0.3.0.post4-cp36-cp36m-linux_x86_64.whl  ;\
+    pip3 install torchvision -i https://mirrors.aliyun.com/pypi/simple/ 
