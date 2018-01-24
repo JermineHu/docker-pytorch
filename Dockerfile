@@ -25,4 +25,4 @@ RUN apt-get -qq update && apt-get -qq -y install curl bzip2 \
          
 ENV PATH /opt/conda/bin:$PATH
 
-RUN conda install pytorch-cpu torchvision -c pytorch
+RUN conda install -y pytorch-cpu torchvision -c pytorch
