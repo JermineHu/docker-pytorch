@@ -35,6 +35,6 @@ RUN apt-get update -y && apt-get install -y software-properties-common && add-ap
     update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.5 1 ;\
     update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 2 ;\
     update-alternatives --config python ;\
-    pip -V && python -V
+    python -V && pip -V
 RUN pip install https://download.pytorch.org/whl/cpu/torch-0.3.0.post4-cp36-cp36m-linux_x86_64.whl  ;\
     pip install torchvision -i https://mirrors.aliyun.com/pypi/simple/ 
