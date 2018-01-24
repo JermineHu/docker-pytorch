@@ -4,8 +4,6 @@ MAINTAINER Jermine.hu@qq.com
 
 WORKDIR /app
 
-COPY ./requirements.txt /app/requirements.txt
-
 RUN set -xe ;\
          apk add --no-cache curl python3 gcc ;\
          curl -sSL https://bootstrap.pypa.io/get-pip.py | python3 ;\
