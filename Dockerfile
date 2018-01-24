@@ -26,7 +26,7 @@
 #ENV PATH /opt/conda/bin:$PATH
 #RUN conda install -y pytorch-cpu torchvision -c pytorch
 
-FROM ubuntu:bionic
+FROM ubuntu:artful
 MAINTAINER Jermine.hu@qq.com
 WORKDIR /app
 COPY ./sources.list /etc/apt/sources.list
