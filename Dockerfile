@@ -30,7 +30,7 @@ FROM ubuntu:artful
 MAINTAINER Jermine.hu@qq.com
 WORKDIR /app
 COPY ./sources.list /etc/apt/sources.list
-RUN apt-get update -y && apt-get install -y python3 python3-pip && apt-get update -y ;\
+RUN apt-get update -y && apt-get install -y python3 python3-pip ;\
     pip3 install --upgrade pip ;\
     python3 -V && pip3 -V ;\
     pip3 install https://download.pytorch.org/whl/cpu/torch-0.3.0.post4-cp36-cp36m-linux_x86_64.whl  ;\
